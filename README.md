@@ -30,7 +30,7 @@ Within the main.tf aws_db_instance resource block, edit the parameter_group_name
 resource "aws_db_instance" "example" {
   identifier                = "my-postgresql-db"
   engine                    = "postgres"
-  engine_version            = "13.3"
+  engine_version            = "14.7"
   instance_class            = "db.m5i.large"
   allocated_storage         = 20
   storage_type              = "gp2"
