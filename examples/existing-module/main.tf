@@ -1,7 +1,8 @@
 # Provision Intel Optimized AWS MySQL server
 
 module "aws-postgresql-parameter-group" {
-  source = "intel/terraform-intel-aws-postgresql-parameter/intel"
+#  source = "intel/terraform-intel-aws-postgresql-parameter/intel"
+  source = "../../"
 }
 
 # Example of how to pass variable for database password:
