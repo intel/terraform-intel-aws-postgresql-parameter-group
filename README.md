@@ -40,7 +40,7 @@ resource "aws_db_instance" "example" {
   name                      = "testpostgresql"
   username                  = "myusername"
   password                  = "var.db_password"
-  parameter_group_name      = "default.postgres13"
+  parameter_group_name      = module.aws-postgresql-parameter-group.db_parameter_group_name
 }
 
 
