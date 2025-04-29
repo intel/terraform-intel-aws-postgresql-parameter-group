@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2024, Intel Corporation
+© Copyright 2025, Intel Corporation
 
 ## AWS RDS MySQL Parameters Group
 
@@ -15,6 +15,7 @@ This example module will create a PostgreSQL RDS instance with the parameters gr
 main.tf
 
 ```hcl
+db_password
 
 # Provision Intel Optimized AWS MySQL server
 
@@ -28,8 +29,8 @@ module "aws-postgresql-parameter-group" {
 resource "aws_db_instance" "example" {
   identifier                = "my-postgresql-db"
   engine                    = "postgres"
-  engine_version            = "14.7"
-  instance_class            = "db.m5i.large"
+  engine_version       = "14.15" # Changing from 14.07 from 14.15
+  instance_class       = "db.m7i.large"
   allocated_storage         = 20
   storage_type              = "gp2"
   publicly_accessible       = false

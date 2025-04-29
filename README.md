@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2024, Intel Corporation
+© Copyright 2025, Intel Corporation
 
 ## AWS RDS Postgresql module
 
@@ -30,8 +30,8 @@ Within the main.tf aws_db_instance resource block, edit the parameter_group_name
 resource "aws_db_instance" "example" {
   identifier                = "my-postgresql-db"
   engine                    = "postgres"
-  engine_version            = "14.7"
-  instance_class            = "db.m5i.large"
+  engine_version            = "14.15" # Upgraded from 14.07 to 14.15
+  instance_class            = "db.m7i.large"
   allocated_storage         = 20
   storage_type              = "gp2"
   publicly_accessible       = false

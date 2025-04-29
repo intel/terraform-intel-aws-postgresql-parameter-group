@@ -12,8 +12,8 @@ resource "aws_db_instance" "postgresql" {
   db_name              = "postgresdb"
   identifier           = "postgresql-intel-optimized"
   engine               = "postgres"
-  engine_version       = "14.7"
-  instance_class       = "db.m6i.large"
+  engine_version       = "14.15" # Changing from 14.07 from 14.15
+  instance_class       = "db.m7i.large"
   username             = "admin25"
   password             = "var.db_password"
   parameter_group_name = module.aws-postgresql-parameter-group.db_parameter_group_name
